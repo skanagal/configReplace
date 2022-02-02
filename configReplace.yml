@@ -4,10 +4,6 @@
   gather_facts: no
   no_log: False
 
-  # vars_prompt:
-  #   - name: configFile
-  #     prompt: full dir path of config file in flash. Ex: file1.cfg (or) work/file1.cfg
-  #     private: no
   vars_prompt:
 
     - name: configFile
@@ -17,13 +13,3 @@
     - name: Replace config with the {{configFile}} File
       eos_config:
           lines: configure replace flash:{{configFile}}
-# ---
-# - hosts: all
-#   vars_prompt:
-#
-#     - name: username
-#       prompt: What is your username?
-#       private: no
-#
-#     - name: password
-#       prompt: What is your password?
